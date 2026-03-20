@@ -21,59 +21,54 @@ Es gibt **zwei einfache Wege**, ein neues Projekt aus diesem Template zu erstell
 
 ---
 
-## ✅ **1. Methode: GitLab → „Import project“ (Repository by URL)**
-
-*(Empfohlen – funktioniert direkt über die GitLab-Weboberfläche)*
-
-1. In GitLab auf **„New project“** klicken
-2. Oben den Tab **„Import project“** auswählen
-3. Option **„Repository by URL“** wählen
-4. In das Feld die URL dieses Template-Repositories einfügen
-
-   * **HTTPS oder SSH**, z. B.:
-
-     ```
-     git@gitlab.deinunternehmen.de:gruppe/webpack-template.git
-     ```
-5. Einen **neuen Projektnamen** vergeben, z. B.
-
+## ✅ 1. Methode: GitHub → „Use this template" (Template Repository)
+ 
+> Empfohlen – funktioniert direkt über die GitHub-Weboberfläche, sofern das Repo als Template markiert ist.
+ 
+1. Das Template-Repository auf GitHub öffnen
+2. Den grünen Button **„Use this template"** klicken
+3. **„Create a new repository"** auswählen
+4. Einen neuen Repository-Namen vergeben, z. B.
    ```
    my-new-frontend
    ```
-6. Auf **„Create project“** klicken
-7. GitLab erzeugt eine **vollständige Kopie dieses Templates**
+5. Sichtbarkeit wählen (Public / Private)
+6. Auf **„Create repository"** klicken
+7. GitHub erzeugt eine vollständige Kopie dieses Templates
 8. Fertig – du kannst direkt losentwickeln
-
+ 
+> Falls das Repo **nicht** als Template markiert ist, nutze Methode 2.
+ 
 ---
-
-## ✅ **2. Methode: Lokal klonen → Remote auf neues Projekt setzen**
-
+ 
+## ✅ 2. Methode: Lokal klonen → Remote auf neues Repo setzen
+ 
 Falls du lieber lokal arbeitest oder das Repo modifizieren willst:
-
-### 1️⃣ Template lokal klonen
-
+ 
+**1️⃣ Template lokal klonen**
+ 
 ```bash
-git clone git@gitlab.deinunternehmen.de:gruppe/webpack-template.git my-new-project
+git clone git@github.com:deinusername/webpack-template.git my-new-project
 cd my-new-project
 ```
-
-### 2️⃣ Neues, leeres GitLab-Projekt anlegen
-
-(z. B. `my-new-project`)
-
-### 3️⃣ Remote von Template-Repo auf neues Projekt umbiegen
-
+ 
+**2️⃣ Neues, leeres GitHub-Repository anlegen**
+ 
+(z. B. `my-new-project`) – ohne README, .gitignore oder Lizenz initialisieren
+ 
+**3️⃣ Remote vom Template-Repo auf neues Projekt umbiegen**
+ 
 ```bash
 git remote remove origin
-git remote add origin <SSH-ODER-HTTPS-URL-DEINES-NEUEN-PROJEKTS>
+git remote add origin <SSH-ODER-HTTPS-URL-DEINES-NEUEN-REPOS>
 ```
-
-### 4️⃣ Projekt hochladen
-
+ 
+**4️⃣ Projekt hochladen**
+ 
 ```bash
 git push -u origin main
 ```
-
+ 
 Jetzt ist dein neues Projekt vollständig eingerichtet und unabhängig vom Template.
 
 ---
